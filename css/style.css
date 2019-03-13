@@ -1,0 +1,28 @@
+@keyframes showcolor{
+    from { 
+        color: white;
+        border-radius: 15px;
+    }
+    to {
+        color: white;
+        background-color: rgb(255,194,32);
+        border-radius: 15px;
+    }
+}
+
+#logo {
+    height: 25%;
+    width: 30%
+}
+
+.header_area {
+    background-image: linear-gradient(lightblue,white);
+}
+
+.nav-link:hover{
+    /* background-color: rgb(255, 194, 32);
+    border-radius: 10px; */
+    animation-name: showcolor;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
