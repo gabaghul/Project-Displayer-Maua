@@ -10,13 +10,25 @@
     }
 }
 
+
+.nav-link{
+    color: black !important;
+}
+
+
+body{
+    color: black;
+}
+
 #logo {
     height: 25%;
     width: 30%
 }
 
 .header_area {
-    background-image: linear-gradient(lightblue,white);
+    /* background-image: linear-gradient(lightblue,white); */
+    position: absolute;
+    width: 100%;
 }
 
 .nav-link:hover{
@@ -25,4 +37,16 @@
     animation-name: showcolor;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
+}
+
+.bginicial {
+    min-height: 900px;
+    display: flex;
+    background: linear-gradient(rgba(3,1,10,0.5),rgba(3,1,10,0.5)),url("../img/bground.jpeg");
+    background-size: auto, auto;
+    background-size: cover;
+}
+
+.content {
+    margin-top: 100px;
 }
