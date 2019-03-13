@@ -18,6 +18,7 @@
 
 body{
     color: black;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #logo {
@@ -25,10 +26,12 @@ body{
     width: 30%
 }
 
-.header_area {
-    /* background-image: linear-gradient(lightblue,white); */
-    position: absolute;
+#header_area {
+    letter-spacing: 2px;
+    background-image: linear-gradient(white,transparent);
+    position: fixed;
     width: 100%;
+    transition: top 0.3s;
 }
 
 .nav-link:hover{
@@ -48,5 +51,5 @@ body{
 }
 
 .content {
-    margin-top: 100px;
+    margin-top: 200px;
 }

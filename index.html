@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
 </head>
 <body> <!-- Navbar será transparente mas irá colapsar após um breakpoint, 
         ficando com a cor gradiente -->
-    <header class="header_area">
+    <header id="header_area">
         <div class="container">
             <nav class="navbar navbar-expand-sm navbar-light mb-3 bg-bisque">
                 <div class="container">
@@ -50,6 +51,18 @@
             </div>
         </div>
     </div>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header_area").style.top = "0";
+            } else {
+            document.getElementById("header_area").style.top = "-200px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
