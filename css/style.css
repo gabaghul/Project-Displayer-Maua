@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 header {
   padding: 156px 0 100px;
 }
@@ -7,7 +11,8 @@ section {
 }
 
 #about {
-  /* background-image: url("assets/img/bg.jpg"); */
-  background-image: url("https://images.pexels.com/photos/1366942/pexels-photo-1366942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("../assets/img/bg.jpg");
   background-size: cover;
 }
+
+
