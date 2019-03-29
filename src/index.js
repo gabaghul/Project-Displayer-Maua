@@ -1,0 +1,6 @@
+import './scss/index.scss'
+import 'jquery'
+import 'popper.js'
+import 'aos'
+import 'bootstrap'
+import './js/scrolling-nav'
