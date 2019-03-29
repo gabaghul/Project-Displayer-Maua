@@ -1,0 +1,40 @@
+{
+  "name": "Project-Displayer-Maua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCamp96/Project-Displayer-Maua.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.6.1",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.1",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "4.0.0",
+    "gulp-sass": "4.0.1",
+    "gulp-uglify": "3.0.0",
+    "gulp-uglifycss": "1.0.9",
+    "gulp-util": "3.0.8",
+    "gulp-watch": "5.0.0",
+    "gulp-webserver": "0.9.1",
+    "run-sequence": "2.2.1",
+    "bootstrap": "4.3.1",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.7",
+    "aos": "2.3.4"
+  },
+  "bugs": {
+    "url": "https://github.com/GabrielCamp96/Project-Displayer-Maua/issues"
+  },
+  "homepage": "https://github.com/GabrielCamp96/Project-Displayer-Maua#readme"
+}
