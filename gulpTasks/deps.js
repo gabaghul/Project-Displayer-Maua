@@ -7,9 +7,8 @@ gulp.task('deps', ['deps.js', 'deps.css'])
 
 gulp.task('deps.js', () => {
     return gulp.src([
-        'node_modules/aos/dist/js/aos.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/jquery/dist/jquery.min.js'
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
     ])
         .pipe(babel({ presets:['env'] })) 
         .pipe(uglify())
@@ -19,8 +18,9 @@ gulp.task('deps.js', () => {
 
 gulp.task('deps.css', () => {
     return gulp.src([
-        'node_modules/bootstrap/dist/css/boostrap.min.css', 
-        'node_modules/aos/dist/css/aos.css'])
+        'node_modules/bootstrap/dist/css/bootstrap.min.css', 
+        'node_modules/animate.css/animate.min.css'
+    ])
         .pipe(concat('deps.min.css'))
         .pipe(gulp.dest('build/css'))
-})
+    })

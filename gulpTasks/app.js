@@ -14,7 +14,7 @@ gulp.task('app.html', () => {
 })
 
 gulp.task('app.css', () => {
-    return gulp.src('src/assets/css/style.css')
+    return gulp.src('src/css/style.css')
         .pipe(uglifycss({ "uglyComments": true }))
         .pipe(concat('app.min.css'))
         .pipe(gulp.dest('build/css'))
@@ -29,6 +29,6 @@ gulp.task('app.js', () => {
 })
 
 gulp.task('app.imgs', () => {
-    return gulp.src('src/imgs/**/*.*')
-        .pipe(gulp.dest('build/imgs'))
+    return gulp.src('src/img/**/*.*')
+        .pipe(gulp.dest('build/img'))
 })
