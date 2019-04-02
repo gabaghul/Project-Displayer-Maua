@@ -82,8 +82,9 @@ body, html {
   }
   
   .react{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 100%;
     background-color: aliceblue;
   }

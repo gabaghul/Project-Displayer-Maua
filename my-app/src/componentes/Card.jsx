@@ -5,7 +5,7 @@ import imgTeste from './teste.jpg'
 export default class Card extends Component {
     render(){
         return(
-            <div className="card">
+            <div className="card" >
                 <img src={imgTeste} alt="foto" className="imgContaner"/>
                 <div className="container">
                     <div className="row_btn">
