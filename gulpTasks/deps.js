@@ -18,8 +18,7 @@ gulp.task('deps.js', () => {
 
 gulp.task('deps.css', () => {
     return gulp.src([
-        'node_modules/bootstrap/dist/css/bootstrap.min.css', 
-        'node_modules/animate.css/animate.min.css'
+        'node_modules/bootstrap/dist/css/bootstrap.min.css'
     ])
         .pipe(concat('deps.min.css'))
         .pipe(gulp.dest('build/css'))

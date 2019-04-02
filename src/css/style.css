@@ -11,8 +11,17 @@ section {
 }
 
 #about {
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
+  background-image: url("../img/giphy.gif");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+#about p{
+  font-size: 1em;
+}
+
+#about h2{
+  font-size: 1.5em;
 }
 
 

@@ -4,7 +4,7 @@ const webserver = require('gulp-webserver')
 
 gulp.task('monitorarMudancas', () => {
     watch('src/**/*.html', () => gulp.start('app.html'))
-    watch('src/**/*.scss', () => gulp.start('app.css'))
+    watch('src/**/*.css', () => gulp.start('app.css'))
     watch('src/**/*.js', () => gulp.start('app.js'))
     watch('src/img/**/*.*', () => gulp.start('app.imgs'))
 })
