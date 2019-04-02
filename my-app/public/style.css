@@ -82,9 +82,6 @@ body, html {
   }
   
   .react{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
     height: 100%;
     background-color: aliceblue;
   }
