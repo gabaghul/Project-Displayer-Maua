@@ -1,25 +1,24 @@
 /* Cards */
 
 .card {
-    width: 92%;
-    max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
+    width: 75%;
     background: #EB5160;
     color: #fff;
     cursor: pointer;
     margin-bottom: 60px;
 }
 
-.card h1 {
-    position: relative;
+.card p {
+    position: static;
     font-size: 1.2em;
 }
 
 .card>img {
+    margin: 10px 0;
     width: 100%;
     position: relative;
+    border-radius: 5px;
 }
 
 .card-color-0 {
@@ -116,6 +115,7 @@
 }
 
 .border {
+    display: none;
     transition: opacity 200ms linear, transform 200ms ease-out;
 }
 
