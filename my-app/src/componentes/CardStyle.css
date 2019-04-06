@@ -27,9 +27,9 @@
   }
 
   .imgContaner{
-      width: 100%;
-      border-top-left-radius: 2%;
-      border-top-right-radius: 2%;
+    width: 100%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
   }
 
   .row_btn{

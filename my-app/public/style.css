@@ -12,76 +12,29 @@ body, html {
     box-sizing: border-box;
   }
   
-  .bg-image {
-    background-image: url(./src/teste.jpg);
-    
-    height: 100%; 
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  section {
+    padding: 150px 0;
   }
   
-  
-  .bg-text {
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.4); 
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-    opacity: 0;
-    transition: all .2s ease-in-out
+  #about {
+    background-image: url("./src/giphy.gif");
+    background-size: 100% 100%;
+    background-attachment: fixed;
   }
   
-  .banner{
-    height: 50%;
+  #about p{
+    font-size: 1em;
   }
   
-  .banner:hover .bg-text{
-    opacity: 1;
-  }
-  
-  .banner:hover .bg-image{
-    position: relative;
-    z-index: -1;
-    opacity: 1;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    transform: scale(1.1);
-    transition: all 0.2s;
-  }
-  
-  #search-bar{
-    display: flex;
-    height: 60px;
-    padding: 15px;
-    margin-right: 10px;
-  }
-  
-  .opt-eng{
-    flex-wrap: wrap;
-  }
-  
-  .input-name-teste{
-    flex-wrap: wrap;
-    border-radius: 5px;
-    height: 30px;
-    border: 2px solid #6eaabd;
-  }
-  
-  .search-img{
-    height: 140%;
+  #about h2{
+    font-size: 1.5em;
   }
   
   .react{
     height: 100%;
     background-color: aliceblue;
+  }
+
+  footer{
+    margin-top: 100px;
   }

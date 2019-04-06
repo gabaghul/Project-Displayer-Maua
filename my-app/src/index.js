@@ -5,8 +5,8 @@ import Card from './componentes/Card'
 var itens = []
 
 const file_1 = <Card class="col-sm" name="Projeto 1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor nunc a nibh sagittis, et."/>
+const file_2 = <Card class="col-sm" name="Projeto 2" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor nunc a nibh sagittis, et."/>
 
-
 itens.push(file_1)
 itens.push(file_1)
 itens.push(file_1)
@@ -16,7 +16,7 @@ itens.push(file_1)
 itens.push(file_1)
 itens.push(file_1)
 itens.push(file_1)
-
+itens.push(file_2)
 
 
 ReactDOM.render(itens, document.getElementById('react'))
