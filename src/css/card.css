@@ -7,6 +7,7 @@
     color: #fff;
     cursor: pointer;
     margin-bottom: 60px;
+    border-radius: 10px;
 }
 
 .card p {
@@ -18,23 +19,19 @@
     margin: 10px 0;
     width: 100%;
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .card-color-0 {
-    background-color: #EB5160;
+    background-color: #212529;
 }
 
 .card-color-1 {
-    background-color: #8F3985;
+    background-color: gray;
 }
 
 .card-color-2 {
-    background-color: #8DAA91;
-}
-
-.card-color-3 {
-    background-color: #888DA7;
+    background-color: rgb(0, 0, 102);
 }
 
 /* The cover (expanding background) */

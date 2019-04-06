@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #c8c8c8;
+}
+
 header {
   padding: 156px 0 100px;
 }
@@ -15,12 +19,14 @@ section {
   background-image: url("../img/giphy.gif");
   background-size: 100% 100%;
   background-attachment: fixed;
+  height: 100vh;
 }
 
 #about p{
-  font-size: 1em;
+  font-size: 1.8em;
+  max-width: 75vh;
 }
 
 #about h2{
-  font-size: 1.5em;
+  font-size: 3em;
 }
