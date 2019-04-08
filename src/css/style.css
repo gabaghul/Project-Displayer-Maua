@@ -5,6 +5,7 @@
 
 body {
   background-color: #c8c8c8;
+  overflow-x: hidden;
 }
 
 header {
