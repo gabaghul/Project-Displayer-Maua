@@ -1,6 +1,6 @@
 // listing vars here so they're in the global scope
 var cards, nCards, cover, openContent, openContentText, pageIsOpen = false,
-    openContentImage, closeContent, windowWidth, windowHeight, currentCard;
+    openContentImage, closeContent, windowWidth, windowHeight, currentCard, nav;
 
 // initiate the process
 init();
@@ -20,6 +20,7 @@ function selectElements() {
         openContentText = document.getElementById('open-content-text'),
         openContentImage = document.getElementById('open-content-image')
     closeContent = document.getElementById('close-content');
+    nav = document.querySelector('nav');
 }
 
 /* Attaching three event listeners here:
@@ -37,6 +38,7 @@ function attachListeners() {
 
 function attachListenerToCard(i) {
     cards[i].addEventListener('click', function (e) {
+        $(nav).addClass('d-none')
         var card = getCardElement(e.target);
         onCardClick(card, i);
     })
@@ -74,7 +76,7 @@ function animateCoverUp(card) {
     setCoverColor(cardStyle);
     scaleCoverToFillWindow(cardPosition);
     // update the content of the opened page
-    openContentText.innerHTML = '<h1>' + card.children[2].textContent + '</h1>' + paragraphText;
+    openContentText.innerHTML = '<h1>' + card.children[2].children[0].textContent + '</h1>' + paragraphText;
     openContentImage.src = card.children[1].src;
     setTimeout(function () {
         // update the scroll position to 0 (so it is at the top of the 'opened' page)
@@ -130,6 +132,7 @@ function scaleCoverToFillWindow(cardPosition) {
 /* When the close is clicked */
 function onCloseClick() {
     // remove the open class so the page content animates out
+    $(nav).removeClass('d-none')
     openContent.className = openContent.className.replace(' open', '');
     // animate the cover back to the original position card and size
     animateCoverBack(currentCard);
@@ -179,4 +182,4 @@ function resize() {
     windowHeight = window.innerHeight;
 }
 
-var paragraphText = '<p>Somebody once told me the world is gonna roll me. I ain\'t the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. Well the years start coming and they don\'t stop coming. Fed to the rules and I hit the ground running. Didn\'t make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see. So what\'s wrong with taking the back streets? You\'ll never know if you don\'t go. You\'ll never shine if you don\'t glow.</p><p>Hey now, you\'re an all-star, get your game on, go play. Hey now, you\'re a rock star, get the show on, get paid. And all that glitters is gold. Only shooting stars break the mold.</p><p>It\'s a cool place and they say it gets colder. You\'re bundled up now, wait till you get older. But the meteor men beg to differ. Judging by the hole in the satellite picture. The ice we skate is getting pretty thin. The water\'s getting warm so you might as well swim. My world\'s on fire, how about yours? That\'s the way I like it and I never get bored.</p>';
+var paragraphText = '<p class="mt-3">Somebody once told me the world is gonna roll me. I ain\'t the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. Well the years start coming and they don\'t stop coming. Fed to the rules and I hit the ground running. Didn\'t make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see. So what\'s wrong with taking the back streets? You\'ll never know if you don\'t go. You\'ll never shine if you don\'t glow.</p><p>Hey now, you\'re an all-star, get your game on, go play. Hey now, you\'re a rock star, get the show on, get paid. And all that glitters is gold. Only shooting stars break the mold.</p><p>It\'s a cool place and they say it gets colder. You\'re bundled up now, wait till you get older. But the meteor men beg to differ. Judging by the hole in the satellite picture. The ice we skate is getting pretty thin. The water\'s getting warm so you might as well swim. My world\'s on fire, how about yours? That\'s the way I like it and I never get bored.</p>';
