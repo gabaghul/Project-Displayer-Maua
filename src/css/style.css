@@ -1,16 +1,18 @@
 * {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
-  
+
 body {
   background-color: #c8c8c8;
   max-width: 1700px;
+  -ms-overflow-style: none;
 }
 
-header {
-  padding: 156px 0 100px;
-}
+
+body::-webkit-scrollbar { width: 0 !important }
+
 
 section {
   padding: 150px 0;
@@ -22,6 +24,7 @@ section {
   background-attachment: fixed;
   height: 100vh;
   max-height: 700px;
+  overflow-y: hidden;
 }
 
 #about p{
