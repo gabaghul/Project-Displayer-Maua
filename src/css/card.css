@@ -61,7 +61,8 @@
 .open-content img {
     position: relative;
     width: 90%;
-    margin-left: 3%;
+    height: 60%;
+    margin-left: 5%;
     margin-top: 20px;
     z-index: 5;
     max-width: 1200px;
@@ -73,7 +74,7 @@
     padding: 60% 5% 5% 5%;
     width: 100%;
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 5%; 
 }
 
 .open-content .text h1, .open-content .text p{
@@ -102,10 +103,12 @@
 
 .x-1 {
     transform: rotate(45deg);
+    background: #222;
 }
 
 .x-2 {
     transform: rotate(-45deg);
+    background: #222;
 }
 
 /* 

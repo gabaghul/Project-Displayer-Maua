@@ -10,9 +10,7 @@ body {
   -ms-overflow-style: none;
 }
 
-
 body::-webkit-scrollbar { width: 0 !important }
-
 
 section {
   padding: 150px 0;
