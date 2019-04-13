@@ -19,7 +19,7 @@ body, html {
   #about {
     background-image: url("./src/giphy.gif");
     background-size: 100% 100%;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
   }
   
   #about p{
