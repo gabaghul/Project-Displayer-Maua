@@ -16,7 +16,7 @@ export default class Card extends Component {
     setFocus(obj){
         var cards = document.getElementsByClassName("card")
         for (i = 0; i < cards.length; i++) {
-            if(cards[i].getAttribute("value") !== obj.props.key_ref){
+            if(cards[i].getAttribute("value").toString() !== obj.props.key_ref.toString()){
                 cards[i].style.display = "none";
             }else{
                 if(window.innerWidth > 800){
@@ -29,7 +29,7 @@ export default class Card extends Component {
                 cards[i].getElementsByTagName("p")[0].style.fontStyle = "italic"
                 cards[i].getElementsByTagName("p")[0].style.fontWeight = "800";
                 cards[i].getElementsByTagName("p")[1].style.display = "block";
-                document.getElementById("react").scrollIntoView({block: "start"});
+                //document.getElementById("react").scrollIntoView({block: "start"});
 
             }
         }
@@ -43,7 +43,7 @@ export default class Card extends Component {
             }
         }
         for (i = 0; i < cards.length; i++) {
-            if(cards[i].getAttribute("value") === obj.props.key_ref){
+            if(cards[i].getAttribute("value").toString() === obj.props.key_ref.toString()){
                 if(window.innerWidth > 800){
                     cards[i].style.width = "30%";
                     cards[i].getElementsByClassName("imgContaner")[0].style.margin="";
