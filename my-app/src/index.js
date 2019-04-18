@@ -16,10 +16,11 @@ Http.onload = function() {
         var name = json_file[i_count]["name_card"]
         var text1 = json_file[i_count]["text1"]
         var text2 = json_file[i_count]["text2"]
-
-        const file= <Card class="col-sm" name={name} key_ref={i_count} text2={text2} text1={text1}/>
+        var img = json_file[i_count]["img"]
+        console.log(img)
+        const file= <Card class="col-sm" name={name} key_ref={i_count} text2={text2} text1={text1} img={img}/>
         itens.push(file)
-    i_count = 1 + i_count
+        i_count = 1 + i_count
     }
     ReactDOM.render(itens, document.getElementById('react'))
 }

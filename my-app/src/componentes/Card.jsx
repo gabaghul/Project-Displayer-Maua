@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './CardStyle.css'
-import imgTeste from './teste.jpg'
+
 var status_value = 0;
 var i = 0;
 export default class Card extends Component {
@@ -63,7 +63,7 @@ export default class Card extends Component {
     render(){
         return(
             <div className="card" value={this.props.key_ref}>
-                <img src={imgTeste} alt="foto" className="imgContaner"/> 
+                <img src={this.props.img} alt="foto" className="imgContaner"/> 
                 <div className="container">
                     <div className="row_btn">
                         <h4>
