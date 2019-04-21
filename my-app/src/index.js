@@ -6,7 +6,7 @@ var itens = [];
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var Http = new XMLHttpRequest();
-Http.open('GET', 'http://icapi/api/cards');
+Http.open('GET', 'http://localhost/ic_api/public/index.php/api/cards');
 Http.onload = function() {
     var json_file =JSON.parse(Http.responseText);
     console.log(Http.responseText)
