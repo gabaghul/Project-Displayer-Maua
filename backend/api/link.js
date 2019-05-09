@@ -2,10 +2,10 @@ module.exports = app => {
     const { existsOrError, notExistsOrError } = app.api.validation
 
     const save = (req, res) => {
+        const link = { ...req.body }
+        
+        if(req.params.id) link.id = req.params.id
         try {
-            const link = { ...req.body }
-            
-            if(req.params.id) link.id = req.params.id
 
             existsOrError(link.descricao, 'Descricao não informada!')
             existsOrError(link.endereco, 'Endereço de link não informado')
