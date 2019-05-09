@@ -32,7 +32,7 @@ module.exports = app => {
         .get(app.api.area.get)
         .post(app.api.area.save)
     
-    app.route('area/:id')
+    app.route('/area/:id')
         // .all(app.config.passport.authenticate())
         .get(app.api.area.getById)
         .put(app.api.area.save)

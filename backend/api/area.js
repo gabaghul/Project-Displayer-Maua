@@ -2,10 +2,10 @@ module.exports = app => {
     const { existsOrError, notExistsOrError } = app.api.validation
 
     const save = (req, res) => {
+        const area = { ...req.body }
+        
+        if(req.params.id) area.id = req.params.id
         try {
-            const area = { ...req.body }
-            
-            if(req.params.id) area.id = req.params.id
 
             existsOrError(area.descricao, 'Descricao não informada!')
         } catch (msg) {
