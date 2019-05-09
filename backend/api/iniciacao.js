@@ -21,7 +21,7 @@ module.exports = app => {
             return res.status(400).send(msg)
         }
 
-        if (category.id) {
+        if (iniciacao.id) {
             app.db('iniciacao')
                 .update(iniciacao)
                 .where({ id: iniciacao.id })
@@ -37,7 +37,7 @@ module.exports = app => {
 
     const get = (req, res) => {
         app.db('iniciacao')
-            .then(iniciacoes = res.json(iniciacoes))
+            .then(iniciacoes => res.json(iniciacoes))
             .catch(err => res.status(500).send(err))
     }
 
