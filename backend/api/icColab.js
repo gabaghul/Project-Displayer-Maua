@@ -2,98 +2,52 @@ module.exports = app => {
     const { existsOrError, notExistsOrError } = app.api.validation
 
     const save = (req, res) => {
+        const relacao = { ...req.body }
         try {
-            const relacao = { ...req.body }
 
-            existsOrError(relacao.idIc, 'Relação com IC não informada!')
-            existsOrError(relacao.idColab, 'Relação com colaborador não informada!')
+            existsOrError(relacao.id_ic, 'Relação com IC não informada!')
+            existsOrError(relacao.id_colab, 'Relação com colaborador não informada!')
         } catch (msg) {
             return res.status(400).send(msg)
         }
-        app.db('id-colab')
+
+        app.db('ic_colab')
             .insert(relacao)
             .then(_ => res.status(204).send())
             .catch(err => res.status(500).send(err))
     }
 
-    const updateByColab = (req, res) => {
-        try {
-            const relacao = { ...req.body }
-
-            existsOrError(relacao.idIc, 'Relação com IC não informada!')
-        } catch (msg) {
-            return res.status(400).send(msg)
-        }
-
-        app.db('id-colab')
-            .update(relacao)
-            .where({ idColab: req.params.idColab })
-            .then(_ => res.status(204).send())
-            .catch(err => res.status(500).send(err))
-    }
-
-    const updateByIc = (req, res) => {
-        try {
-            const relacao = { ...req.body }
-
-            existsOrError(relacao.idColab, 'Relação com colaborador não informada!')
-        } catch (msg) {
-            return res.status(400).send(msg)
-        }
-
-        app.db('id-colab')
-            .update(relacao)
-            .where({ idIc: req.params.idIc })
-            .then(_ => res.status(204).send())
-            .catch(err => res.status(500).send(err))
-    }
-
     const get = (req, res) => {
-        app.db('id-colab')
-            .select('*')
-            .then(relacoes => res.json(relacoes))
-            .catch(err => res.status(500).send(err))
-    }
-
-    const getByIc = (req, res) => {
-        app.db('id-colab')
-            .select('*')
-            .where({ idIc: req.params.idIc })
-            .then(_ => res.status(204).send())
-            .catch(err => res.status(500).send(msg))
-    }
-
-    const getByColab = (req, res) => {
-        app.db('id-colab')
-            .select('*')
-            .where({ idColab: req.params.idColab })
-            .then(_ => res.status(204).send())
-            .catch(err => res.status(500).send(msg))
-    }
-
-    const removeByIc = async (req, res) => {
-        try {
-            const rowsDeleted = await app.db('id-colab')
-            .where({ idIc: req.params.idIc }).del()
-            existsOrError(rowsDeleted, 'Relação não foi encontrada.')
-
-            res.status(204).send()
-        } catch(msg) {
-            res.status(400).send(msg)
+        if(req.body.id_ic && req.body.id_colab) {
+            app.db('ic_colab')
+                .select('*')
+                .where({ id_ic: req.body.id_ic })
+                .where({ id_colab: req.body.id_colab })
+                .then(relacoes => res.json(relacoes))
+                .catch(err => res.status(500).send(err))
+        } else {
+            if(req.body.id_colab){
+                app.db('ic_colab')
+                .select('*')
+                .where({ id_colab: req.body.id_colab })
+                .then(relacoes => res.json(relacoes))
+                .catch(err => res.status(500).send(err))
+            } else {
+                if(req.body.id_ic){
+                    app.db('ic_colab')
+                    .select('*')
+                    .where({ id_ic: req.body.id_ic })
+                    .then(relacoes => res.json(relacoes))
+                    .catch(err => res.status(500).send(err))
+                } else {
+                    app.db('ic_colab')
+                        .select('*')
+                        .then(relacoes => res.json(relacoes))
+                        .catch(err => res.status(500).send(err))
+                }
+            }
         }
     }
 
-    const removeByColab = async (req, res) => {
-        try {
-            const rowsDeleted = await app.db('id-colab')
-            .where({ idColab: req.params.idColab }).del()
-            existsOrError(rowsDeleted, 'Relação não foi encontrada.')
-
-            res.status(204).send()
-        } catch(msg) {
-            res.status(400).send(msg)
-        }
-    }
-
-    return { save, get, getByIc, getByColab, updateByIc, updateByColab, removeByIc, removeByColab }
+    return { save, get }
 }

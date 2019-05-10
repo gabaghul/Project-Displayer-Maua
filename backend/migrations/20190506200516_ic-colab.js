@@ -1,13 +1,13 @@
 
 exports.up = function(knex, Promise) {
-    return knex.schema.createTable('ic-colab', table => {
-        table.integer('idIc').notNull()
-        table.integer('idColab').notNull()
-        table.foreign('idIc').references('iniciacao.id')
-        table.foreign('idColab').references('colaborador.id')
+    return knex.schema.createTable('ic_colab', table => {
+        table.integer('id_ic').notNull()
+        table.integer('id_colab').notNull()
+        table.foreign('id_ic').references('iniciacao.id').onDelete('cascade')
+        table.foreign('id_colab').references('colaborador.id').onDelete('cascade')
     })
 };
 
 exports.down = function(knex, Promise) {
-    return knex.dropTable('ic-colab')
+    return knex.schema.dropTable('ic_colab')
 };

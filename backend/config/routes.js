@@ -53,17 +53,4 @@ module.exports = app => {
         // .all(app.config.passport.authenticate())
         .get(app.api.icColab.get)
         .post(app.api.icColab.save)
-    
-    app.route('/ic-colab-idIc/:idIc')
-        // .all(app.config.passport.authenticate())
-        .get(app.api.icColab.getByIc)
-        .put(app.api.icColab.updateByIc)
-        .delete(app.api.icColab.removeByIc)
-
-    app.route('/ic-colab-idColab/:idColab')
-        // .all(app.config.passport.authenticate())
-        .get(app.api.icColab.getByColab)
-        .put(app.api.icColab.updateByColab)
-        .delete(app.api.icColab.removeByColab)
-
 }
