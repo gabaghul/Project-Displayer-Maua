@@ -4,9 +4,8 @@ const db = require('./config/db')
 
 app.db = db
 
-// Arquivos ainda não criados
 consign() // Funciona de forma serial, definindo o arquivo literalmente você garante sequencia nos carregamentos
-    // .then('./config/passport.js')
+    .then('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api/validation.js')
     .then('./api/')

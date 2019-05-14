@@ -1,25 +1,29 @@
 // const admin = require('./admin')
-
+const { admin, prof, colab } = require('./admin')
 module.exports = app => {
-    // app.post('/signup', app.api.user.save)
-    // app.post('/signin', app.api.auth.signin)
-    // app.post('/validateToken', app.api.auth.validateToken)
+    app.post('/signup', app.api.colaborador.save)
+    app.post('/signin', app.api.auth.signin)
+    app.post('/validateToken', app.api.auth.validateToken)
 
     app.route('/colab')
         // .all(app.config.passport.authenticate())
-        .post(app.api.colaborador.save) // Caminho até a pasta separado por pontos
+        .post(app.config.passport.authenticate())
+        .post(prof(app.api.colaborador.save)) // Caminho até a pasta separado por pontos
         .get(app.api.colaborador.get)
 
     app.route('/colab/:id')
         // .all(app.config.passport.authenticate())
+        .put(app.config.passport.authenticate())
+        .delete(app.config.passport.authenticate())
         .get(app.api.colaborador.getById)
-        .put(app.api.colaborador.save)
-        .delete(app.api.colaborador.remove)
+        .put(colab(app.api.colaborador.save))
+        .delete(prof(app.api.colaborador.remove))
     
     app.route('/iniciacao')        
         // .all(app.config.passport.authenticate())
+        .post(app.config.passport.authenticate())
         .get(app.api.iniciacao.get)
-        .post(app.api.iniciacao.save)
+        .post(admin(app.api.iniciacao.save))
     
     app.route('/iniciacao/:id')
         // .all(app.config.passport.authenticate())
