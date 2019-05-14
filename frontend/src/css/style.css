@@ -26,10 +26,50 @@ section {
 }
 
 #about p{
-  font-size: 1.8em;
+  font-size: 1.5em;
   max-width: 75vh;
 }
 
 #about h2{
-  font-size: 3em;
+  font-size: 4em;
+  overflow-y: hidden;
+}
+
+footer .col-7 .fab {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5em;
+    margin-right: 30px;
+}
+
+footer .col-7 .fa-instagram:hover {
+    color: #E1306C;
+}
+
+footer .col-7 .fa-google-plus:hover {
+    color: #d34836;
+}
+
+footer .col-7 .fa-blogger-b:hover {
+    color: #fb8f3d;
+}
+
+footer .col-7 .fa-linkedin-in:hover {
+    color: #0077b5;
+}
+
+footer .col-7 .fa-youtube:hover {
+    color: #ff0000;
+}
+
+footer .col-7 .fa-flickr:hover {
+    color: #fff;
+}
+
+footer .col-7 .fa-twitter:hover {
+    color: #38A1F3;
+}
+
+footer .col-7 .fa-facebook:hover {
+    color: #3b5998;
 }
