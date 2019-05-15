@@ -48,49 +48,108 @@ section {
     overflow-y: hidden;
 }
 
-#cards .d-flex h2 {
-    font-size: 3rem;
+
+#cards .header {
+    display: grid;
+    grid-template-columns: 1fr 5px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "button" "title";
 }
 
-footer .col-7 .fab {
+#cards .btn {
+    font-size: 1rem;
+    width: 250px;
+    grid-area: button;
+}
+
+#cards .title {
+    font-size: 2rem;
+    grid-area: title;
+}
+
+@media(max-width: 700px ) {
+    #cards .header {
+        grid-template-rows: 100px 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title"
+        "button";
+    }
+
+    #cards .btn {
+        margin-right: auto;
+    }
+
+    #cards .title {
+        font-size: 1.6rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "logo"
+        "social"
+        "git";
+    }
+
+    footer .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        grid-area: logo;
+    }
+
+    footer .footer-social{
+        text-align: center;
+        grid-area: social;
+    }
+
+    footer .footer-git {
+        margin-left: auto;
+        grid-area: git;
+    }
+}
+
+footer .footer-social .fab {
     text-decoration: none;
     color: gray;
     font-size: 1.5rem;
     margin-right: 30px;
 }
 
-.dropdown-menu {
-    z-index: 10;
-}
-
-footer .col-7 .fa-instagram:hover {
+footer .footer-social .fa-instagram:hover {
     color: #E1306C;
 }
 
-footer .col-7 .fa-google-plus:hover {
+footer .footer-social .fa-google-plus:hover {
     color: #d34836;
 }
 
-footer .col-7 .fa-blogger-b:hover {
+footer .footer-social .fa-blogger-b:hover {
     color: #fb8f3d;
 }
 
-footer .col-7 .fa-linkedin-in:hover {
+footer .footer-social .fa-linkedin-in:hover {
     color: #0077b5;
 }
 
-footer .col-7 .fa-youtube:hover {
+footer .footer-social .fa-youtube:hover {
     color: #ff0000;
 }
 
-footer .col-7 .fa-flickr:hover {
+footer .footer-social .fa-flickr:hover {
     color: #fff;
 }
 
-footer .col-7 .fa-twitter:hover {
+footer .footer-social .fa-twitter:hover {
     color: #38A1F3;
 }
 
-footer .col-7 .fa-facebook:hover {
+footer .footer-social .fa-facebook:hover {
     color: #3b5998;
 }

@@ -59,14 +59,17 @@
     </section>
 
     <section id="cards" class="bg-light py-0">
-        <div class="d-flex">
-            <h2 class="pl-5 py-4">Iniciações Científicas</h2>
-            <!-- Botão para acionar modal -->
-            <button type="button" class="btn btn-primary ml-auto mr-5 h-25 align-self-center" data-toggle="modal"
-                data-target="#ExemploModalCentralizado">
-                Selecione a área de atuação
-            </button>
-
+        <div class="py-4 row">
+            <div class="container header">
+                <div class="row">
+                    <h2 class="title">Iniciações Científicas</h2>
+                    <!-- Botão para acionar modal -->
+                    <button type="button" class="btn btn-outline-secondary ml-auto" data-toggle="modal"
+                        data-target="#ExemploModalCentralizado">
+                        Selecione a área de atuação
+                    </button>
+                </div>
+            </div>
             <!-- Modal -->
             <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
                 aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -81,12 +84,102 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label class="radio">
-                                        <input type="radio" name="r" value="1" checked>
-                                        <span>Radio #1</span>
-                                    </label>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area1">
+                                            <input class="form-check-input" type="radio" name="area" id="area1">
+                                            Educação em Engenharia.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area2">
+                                            <input class="form-check-input" type="radio" name="area" id="area2">
+                                            Materiais de Construção Civil.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area3">
+                                            <input class="form-check-input" type="radio" name="area" id="area3">
+                                            Controle, Automação e Robótica Voltados para o Ensino e Pesquisa.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area4">
+                                            <input class="form-check-input" type="radio" name="area" id="area4">
+                                            Núcleo de Sistemas Eletrônicos Embarcados.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area5">
+                                            <input class="form-check-input" type="radio" name="area" id="area5">
+                                            Sistemas Mecatrônicos Inteligentes e Robótica (SMIR).
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area6">
+                                            <input class="form-check-input" type="radio" name="area" id="area6">
+                                            Ciência e Engenharia de Materiais.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area7">
+                                            <input class="form-check-input" type="radio" name="area" id="area7">
+                                            Motores de Combustão Interna.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area8">
+                                            <input class="form-check-input" type="radio" name="area" id="area8">
+                                            Processos de Fabricação e Projeto Mecânico.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area9">
+                                            <input class="form-check-input" type="radio" name="area" id="area9">
+                                            Tratamento Biológico de Águas Residuárias.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area10">
+                                            <input class="form-check-input" type="radio" name="area" id="area10">
+                                            Aplicação de Processos Oxidativos Avançados.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area11">
+                                            <input class="form-check-input" type="radio" name="area" id="area11">
+                                            Sistemas Particularizados.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area12">
+                                            <input class="form-check-input" type="radio" name="area" id="area12">
+                                            Aplicação de Micro-ondas em Processos Industriais.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area13">
+                                            <input class="form-check-input" type="radio" name="area" id="area13">
+                                            Simulação de Fenômenos e Processos.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area14">
+                                            <input class="form-check-input" type="radio" name="area" id="area14">
+                                            Desenvolvimento de Conservação de Produtos Alimentícios.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="area15">
+                                            <input class="form-check-input" type="radio" name="area" id="area15">
+                                            Comissionamento Virtual.
+                                        </label>
+                                    </div>
                                 </div>
                             </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Filtrar</button>
+                            <button class="btn btn-secondary">Cancelar</button>
                         </div>
                     </div>
                 </div>
@@ -94,7 +187,7 @@
         </div>
         <div class="container">
             <div class="row justify-content-center justify-content-sm-between">
-                <div class="card mx-1 p-0 col-md-3 col-sm-12">
+                <div class="card p-0 col-md-3 col-sm-12">
                     <div class="border"></div>
                     <img src="https://www.voit.com.br/wp-content/uploads/2017/10/IoT_Agritech-1440x564_c.jpg" />
                     <div class="mx-3 text-justify mt-3 overflow-hidden">
@@ -178,34 +271,31 @@
         </div>
     </section>
 
-    <footer class="py-4 px-5 bg-dark">
-        <div class="container d-inline-flex">
-            <div class="col-3">
-                <a href="http://maua.br"><img src="https://www.maua.br/img/default/logo_maua.png" alt="" srcset=""></a>
+    <footer class="py-4 px-5 bg-dark row">
+        <div class="footer-logo">
+            <a href="http://maua.br"><img src="https://www.maua.br/img/default/logo_maua.png" alt="" srcset=""></a>
+        </div>
+        <div class="footer-social mx-auto my-1">
+            <p class="text-white">Acesse nossas redes sociais:</p>
+            <div class="text-white d-flex justify-content-center">
+                <a href="https://www.instagram.com/infomaua/"><i class="fab fa-instagram"></i></a>
+                <a href="http://blog.maua.br/?_ga=2.160610686.2131410068.1557862682-155817039.1554315108"><i
+                        class="fab fa-blogger-b"></i></a>
+                <a href="https://www.linkedin.com/school/479773/admin/updates"><i class="fab fa-linkedin-in"></i></a>
+                <a href="http://www.youtube.com/infomaua"><i class="fab fa-youtube"></i></a>
+                <a href="http://www.flickr.com/photos/infomaua"><i class="fab fa-flickr"></i></a>
+                <a href="https://twitter.com/InfoMaua"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/InstitutoMaua"><i class="fab fa-facebook"></i></a>
             </div>
-            <div class="col-7">
-                <p class="text-white">Acesse nossas redes sociais:</p>
-                <p class="text-white">
-                    <a href="https://www.instagram.com/infomaua/"><i class="fab fa-instagram"></i></a>
-                    <a href="http://blog.maua.br/?_ga=2.160610686.2131410068.1557862682-155817039.1554315108"><i
-                            class="fab fa-blogger-b"></i></a>
-                    <a href="https://www.linkedin.com/school/479773/admin/updates"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="http://www.youtube.com/infomaua"><i class="fab fa-youtube"></i></a>
-                    <a href="http://www.flickr.com/photos/infomaua"><i class="fab fa-flickr"></i></a>
-                    <a href="https://twitter.com/InfoMaua"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/InstitutoMaua"><i class="fab fa-facebook"></i></a>
-                </p>
-            </div>
-            <div class="col-2">
-                <p class="m-0 text-right text-white">Feito com <i class="fas fa-heart text-danger"></i> por:</p>
-                <p class="m-0 text-right text-white"><a class="text-white" href="https://github.com/kikepola">Kikepola
-                        <i class="fab fa-github"></i></a></p>
-                <p class="m-0 text-right text-white"><a class="text-white" href="https://github.com/KevinYuki">KevinYuki
-                        <i class="fab fa-github"></i></a></p>
-                <p class="m-0 text-right text-white"><a class="text-white"
-                        href="https://github.com/GabrielCamp96">GabrielCamp96 <i class="fab fa-github"></i></a></p>
-            </div>
+        </div>
+        <div class="footer-git">
+            <p class="m-0 text-right text-white">Feito com <i class="fas fa-heart text-danger"></i> por:</p>
+            <p class="m-0 text-right text-white"><a class="text-white" href="https://github.com/kikepola">Kikepola
+                    <i class="fab fa-github"></i></a></p>
+            <p class="m-0 text-right text-white"><a class="text-white" href="https://github.com/KevinYuki">KevinYuki
+                    <i class="fab fa-github"></i></a></p>
+            <p class="m-0 text-right text-white"><a class="text-white"
+                    href="https://github.com/GabrielCamp96">GabrielCamp96 <i class="fab fa-github"></i></a></p>
         </div>
     </footer>
     <script src="js/deps.min.js"></script>
