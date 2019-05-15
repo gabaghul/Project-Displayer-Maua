@@ -6,7 +6,7 @@ const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
 
-gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.imgs'])
+gulp.task('app', ['app.html', 'app.fonts', 'app.css', 'app.js', 'app.imgs'])
 
 gulp.task('app.html', () => {
     return gulp.src('src/**/*.html')
@@ -27,6 +27,11 @@ gulp.task('app.js', () => {
         .pipe(uglify())
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('build/js'))
+})
+
+gulp.task('app.fonts', () => {
+    return gulp.src('src/fonts/**/*.*')
+        .pipe(gulp.dest('build/webfonts'))
 })
 
 gulp.task('app.imgs', () => {

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../webfonts/Montserrat-Regular.ttf')
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -48,13 +53,11 @@ section {
     overflow-y: hidden;
 }
 
-
 #cards .header {
     display: grid;
     grid-template-columns: 1fr 5px;
     grid-template-rows: 1fr;
-    grid-template-areas: 
-    "button" "title";
+    grid-template-areas: "button" "title";
 }
 
 #cards .btn {
@@ -68,47 +71,36 @@ section {
     grid-area: title;
 }
 
-@media(max-width: 700px ) {
+@media(max-width: 700px) {
     #cards .header {
         grid-template-rows: 100px 20px;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "title"
-        "button";
+        grid-template-areas: "title" "button";
     }
-
     #cards .btn {
         margin-right: auto;
     }
-
     #cards .title {
         font-size: 1.6rem;
         margin-left: auto;
         margin-right: auto;
     }
-
     footer {
         display: grid;
         grid-template-rows: 100px 100px 100px;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "logo"
-        "social"
-        "git";
+        grid-template-areas: "logo" "social" "git";
     }
-
     footer .footer-logo {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
         grid-area: logo;
     }
-
-    footer .footer-social{
+    footer .footer-social {
         text-align: center;
         grid-area: social;
     }
-
     footer .footer-git {
         margin-left: auto;
         grid-area: git;
