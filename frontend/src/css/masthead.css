@@ -1,0 +1,42 @@
+.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    z-index: 2;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+}
+
+.masthead .content {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.masthead .masthead-content h1 {
+    font-size: 3rem;
+    -webkit-transform: skewX(4deg);
+    transform: skewX(4deg);
+}
+
+.masthead .masthead-content p {
+    max-width: 400px;
+    font-size: 1.2rem;
+    -webkit-transform: skewX(4deg);
+    transform: skewX(4deg);
+}

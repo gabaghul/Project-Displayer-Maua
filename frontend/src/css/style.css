@@ -23,6 +23,14 @@ section {
     padding: 150px 0;
 }
 
+#home {
+    height: 100vh;
+    max-height: 700px;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+}
+
 #about {
     height: 100vh;
     max-height: 700px;
@@ -32,6 +40,41 @@ section {
 }
 
 #about img {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(45%);
+}
+
+#about .content {
+    position: absolute;
+    background-color: white;
+    width: 50%;
+    left: 0;
+    z-index: 10;
+    background: white;
+    width: 50%;
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+#about .content h2 {
+    font-size: 2rem;
+    -webkit-transform: skewX(4deg);
+    transform: skewX(4deg);
+}
+
+#about .content p {
+    font-size: 1.5rem;
+    max-width: 400px;
+    -webkit-transform: skewX(4deg);
+    transform: skewX(4deg);
+}
+
+#home img {
     /* background-image: url("../img/giphy.gif"); */
     position: absolute;
     width: 100%;
@@ -41,16 +84,6 @@ section {
     z-index: -1;
     filter: brightness(80%);
     /* background-attachment: fixed; */
-}
-
-#about p {
-    font-size: 1.5rem;
-    max-width: 75vh;
-}
-
-#about h2 {
-    font-size: 3.8rem;
-    overflow-y: hidden;
 }
 
 #cards .header {
