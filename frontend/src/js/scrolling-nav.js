@@ -10,4 +10,11 @@ $(document).ready(() => {
     document.querySelector(`section[id=${link}]`)
       .scrollIntoView({ block: 'start', behavior: 'smooth' })
   });
+
+  $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".navbar");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+  });
 })

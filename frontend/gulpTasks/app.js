@@ -4,7 +4,7 @@ const uglify = require('gulp-uglify')
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
-const imagemin = require('gulp-imagemin')
+const imagemin = require('gulp-image')
 
 gulp.task('app', ['app.html', 'app.fonts', 'app.css', 'app.js', 'app.imgs'])
 
