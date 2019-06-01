@@ -35,12 +35,11 @@ section {
 }
 
 @media screen and (min-width: 601px) {
-    #home h1 {
+    #home h1, #about h2 {
         font-size: 60px;
         text-align: end;
     }
-    #home p {
-        float: right;
+    #home p, #about p {
         font-size: 32px;
         max-width: 500px;
         text-align: right;
@@ -48,12 +47,23 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-    #home h1 {
+    #home h1, #about h2 {
         font-size: 56px;
+        text-align: justify;
     }
-    #home p {
+
+    #home p, #about p {
         font-size: 24px;
-        text-align: justify
+        text-align: justify;
+    }
+
+    #about .image {
+        display: none;
+    }
+
+    #about .txt {
+        width: 100vw;
+        margin-left: 1rem;
     }
 }
 
@@ -72,7 +82,6 @@ section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "images" "txt";
 }
 
 #about .image {
@@ -112,6 +121,10 @@ section {
 #portfolio .title {
     font-size: 2rem;
     grid-area: title;
+}
+
+#portfolio .row .modal {
+    z-index: 1500;
 }
 
 #portfolio .portfolio-item {
@@ -236,17 +249,17 @@ section {
     opacity: 0.3;
 }
 
-@media(max-width: 700px) {
-    #cards .header {
+@media(max-width: 766px) {
+    #portfolio .header {
         grid-template-rows: 100px 20px;
         grid-template-columns: 1fr;
         grid-template-areas: "title" "button";
     }
-    #cards .btn {
+    #portfolio .btn {
         margin-right: auto;
     }
-    #cards .title {
-        font-size: 1.6rem;
+    #portfolio .title {
+        font-size: 2rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -269,6 +282,12 @@ section {
     footer .footer-git {
         margin-left: auto;
         grid-area: git;
+    }
+}
+
+@media(max-width: 321px) {
+    #portfolio .title {
+        font-size: 1.7rem;
     }
 }
 
