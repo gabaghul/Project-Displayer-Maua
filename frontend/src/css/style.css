@@ -51,16 +51,13 @@ section {
         font-size: 56px;
         text-align: justify;
     }
-
     #home p, #about p {
         font-size: 24px;
         text-align: justify;
     }
-
     #about .image {
         display: none;
     }
-
     #about .txt {
         width: 100vw;
         margin-left: 1rem;
@@ -156,7 +153,6 @@ section {
 #portfolio .portfolio-item:hover img {
     transform: scale(1.05);
 }
-
 
 #portfolio .portfolio-item .portfolio-link {
     position: relative;
