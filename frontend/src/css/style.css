@@ -42,6 +42,7 @@ section {
     #home h1, #about h2 {
         font-size: 60px;
         text-align: end;
+        overflow-y: hidden;
     }
     #home p, #about p {
         font-size: 32px;
