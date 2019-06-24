@@ -7,6 +7,7 @@ gulp.task('monitorarMudancas', () => {
     watch('src/**/*.css', () => gulp.start('app.css'))
     watch('src/**/*.js', () => gulp.start('app.js'))
     watch('src/img/**/*.*', () => gulp.start('app.imgs'))
+    watch('src/fonts/**/*.*', () => gulp.start('app.fonts'))
 })
 
 gulp.task('servidor', ['monitorarMudancas'], () => {

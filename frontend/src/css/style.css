@@ -3,6 +3,11 @@
     src: url('../webfonts/Montserrat-Regular.ttf')
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/Roboto-Regular.ttf')
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -11,7 +16,6 @@
 
 body {
     background-color: #c8c8c8;
-    max-width: 1700px;
     -ms-overflow-style: none;
 }
 
@@ -41,7 +45,7 @@ section {
     }
     #home p, #about p {
         font-size: 32px;
-        max-width: 500px;
+        max-width: 550px;
         text-align: right;
     }
 }
@@ -50,10 +54,12 @@ section {
     #home h1, #about h2 {
         font-size: 56px;
         text-align: justify;
+        text-shadow: 2px 2px black;
     }
     #home p, #about p {
         font-size: 24px;
-        text-align: justify;
+        text-align: left;
+        text-shadow: 4px 4px black;
     }
     #about .image {
         display: none;
@@ -184,6 +190,10 @@ section {
 
 #portfolio * {
     z-index: 2;
+}
+
+.portfolio-item * {
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width: 767px) {
