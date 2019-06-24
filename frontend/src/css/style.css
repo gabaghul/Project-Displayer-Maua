@@ -42,7 +42,7 @@ section {
     #home h1, #about h2 {
         font-size: 60px;
         text-align: end;
-        overflow-y: hidden;
+        overflow: hidden;
     }
     #home p, #about p {
         font-size: 32px;
@@ -175,6 +175,7 @@ section {
     padding: 25px;
     text-align: center;
     background-color: #fff;
+    height: 200px;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -197,6 +198,11 @@ section {
     font-family: 'Roboto', sans-serif;
 }
 
+.portfolio-item img {
+    height: 200px;
+    width: max-content;
+}
+
 @media (min-width: 767px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
@@ -214,12 +220,15 @@ section {
 }
 
 .portfolio-modal .modal-content h2 {
-    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
     margin-bottom: 15px;
 }
 
 .portfolio-modal .modal-content p {
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .portfolio-modal .modal-content p.item-intro {
