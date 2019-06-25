@@ -1,0 +1,13 @@
+Henrique Poladian   16.00026-9
+
+Criação da navbar -> 2 horas 
+Criação do header -> 1 hora 
+Criação do db com mysql -> 1 horas 
+Criação da api com php -> 2 horas 
+Criação dos cards com react e conexão com a api -> 6 horas 
+Criação do footer -> 1 hora 
+Criação da área de login -> 1 hora 
+Pagina para adicionar card -> 1 hora e meia 
+Funcionalidades do card -> 2 horas 
+
+Total -> 17 horas e meia
