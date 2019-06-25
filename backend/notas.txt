@@ -1,0 +1,6 @@
+ver separação das ICs (por curso)
+ver infos (Principal linha de pesquisa, Pincipais projetos ...)
+diferenciar professores dentro de cada IC? (sem admin DA IC)
+https://maua.br/pesquisas
+
+tomar cuidado com aspas dentro do JSON 

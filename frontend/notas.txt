@@ -1,0 +1,4 @@
+largura dos cards um pouco maior,
+adotar formulario nos cards
+fuso horario do postgres errado
+navbar em monitor full hd
