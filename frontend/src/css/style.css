@@ -55,7 +55,7 @@ section {
     #home h1, #about h2 {
         font-size: 56px;
         text-align: justify;
-        text-shadow: 1px 1px black;
+        
         overflow: hidden;
     }
     #home p, #about p {
@@ -102,6 +102,7 @@ section {
 
 #about .txt h2 {
     font-size: 2.3rem;
+    text-shadow: .5px .5px .5px black;
 }
 
 #about .txt p {
@@ -231,8 +232,7 @@ section {
 
 @media (max-width: 600px){
     .portfolio-modal .modal-content h2 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.3em;
         margin-bottom: 5px;
     }
 }
@@ -275,6 +275,20 @@ section {
 
 .portfolio-modal .close-modal:hover {
     opacity: 0.3;
+}
+
+#participe .container {
+    padding: 130px 15px 130px;
+}
+#participe  {
+    text-align: justify;
+}
+#participe .content {
+    font-size: 1.2rem;
+}
+
+#participe h2 {
+    text-shadow: .5px .5px .5px black;
 }
 
 @media(max-width: 766px) {
