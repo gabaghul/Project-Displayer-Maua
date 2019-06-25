@@ -54,13 +54,13 @@ section {
 @media screen and (max-width: 600px) {
     #home h1, #about h2 {
         font-size: 56px;
-        text-align: justify;
+        text-align: left;
         
         overflow: hidden;
     }
     #home p, #about p {
         font-size: 24px;
-        text-align: left;
+        text-align: justify;
     }
     #about .image {
         display: none;
