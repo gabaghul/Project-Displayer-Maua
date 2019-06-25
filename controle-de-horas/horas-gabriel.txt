@@ -1,0 +1,58 @@
+﻿Gabriel 16.00151-6
+
+19/03/19
+3 horas
+
+20/03/19
+3 horas
+
+21/03/19
+1 hora
+
+28/03/19 building
+1 hora
+
+29/03/19 building
+2 horas
+
+02/04/19 finish build & card
+3 horas
+
+05/04/19 disposição dos cards
+1 hora
+
+08/04/19 visual cards
+1:30 horas
+
+09/04/19 scroll e hr do card
+30 min
+
+10/04/19 card fix
+4 horas
+
+06/05/19 configuracao backend
+1 hora
+
+09/05/19 definicao de rotas
+3 horas
+
+10/05/19 teste de crud e code fixing
+3 horas
+
+14/05/19 footer, novo banner e troca do dropdown pelo modal
+4 horas
+
+15/05/19 responsividade
+4 horas 
+
+16/05/19 nova section e novo modelamento, template novo
+6 horas
+
+29/05/19 novo template
+4 horas
+
+30/05/19 cards e animações
+1:30 horas
+
+24/06/19 textos, links em nova aba e altura do card fixa
+30 min
