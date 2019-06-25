@@ -102,7 +102,7 @@ section {
 
 #about .txt h2 {
     font-size: 2.3rem;
-    text-shadow: .5px .5px .5px black;
+    /* text-shadow: .25px .25px .25px black; */
 }
 
 #about .txt p {
@@ -288,7 +288,7 @@ section {
 }
 
 #participe h2 {
-    text-shadow: .5px .5px .5px black;
+    /* text-shadow: .25px .25px .25px black; */
 }
 
 @media(max-width: 766px) {
