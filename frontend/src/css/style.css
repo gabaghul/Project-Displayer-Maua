@@ -55,12 +55,12 @@ section {
     #home h1, #about h2 {
         font-size: 56px;
         text-align: justify;
-        text-shadow: 2px 2px black;
+        text-shadow: 1px 1px black;
+        overflow: hidden;
     }
     #home p, #about p {
         font-size: 24px;
         text-align: left;
-        text-shadow: 4px 4px black;
     }
     #about .image {
         display: none;
@@ -134,6 +134,7 @@ section {
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
+    padding-bottom: 5px;
 }
 
 #portfolio .portfolio-item .overlay {
@@ -149,15 +150,15 @@ section {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-#portfolio .portfolio-item:hover .overlay {
+#portfolio .portfolio-item .portfolio-link:hover .overlay {
     opacity: 1;
 }
 
-#portfolio .portfolio-item img {
+#portfolio .portfolio-item .portfolio-link img {
     transition: .5s ease;
 }
 
-#portfolio .portfolio-item:hover img {
+#portfolio .portfolio-item .portfolio-link:hover img {
     transform: scale(1.05);
 }
 
@@ -167,6 +168,7 @@ section {
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #portfolio .portfolio-item .portfolio-caption {
@@ -176,11 +178,13 @@ section {
     text-align: center;
     background-color: #fff;
     height: 200px;
+    overflow: hidden;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;
     text-transform: none;
+    color: black;
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
@@ -215,7 +219,7 @@ section {
 }
 
 .portfolio-modal .modal-content {
-    padding: 100px 0;
+    padding: 80px 0 50px;
     text-align: center;
 }
 
@@ -223,6 +227,14 @@ section {
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
     margin-bottom: 15px;
+}
+
+@media (max-width: 600px){
+    .portfolio-modal .modal-content h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
 }
 
 .portfolio-modal .modal-content p {
